@@ -1,0 +1,14 @@
+E:\Projetos\barber_project\api\barberApi\barberDLL\bin\Debug\net6.0\barberDLL.deps.json
+E:\Projetos\barber_project\api\barberApi\barberDLL\bin\Debug\net6.0\barberDLL.dll
+E:\Projetos\barber_project\api\barberApi\barberDLL\bin\Debug\net6.0\ref\barberDLL.dll
+E:\Projetos\barber_project\api\barberApi\barberDLL\bin\Debug\net6.0\barberDLL.pdb
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.AssemblyInfoInputs.cache
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.AssemblyInfo.cs
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.csproj.CoreCompileInputs.cache
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.dll
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\ref\barberDLL.dll
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.pdb
+E:\Projetos\barber_project\api\barberApi\barberDLL\bin\Debug\net6.0\barberDLL.runtimeconfig.json
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.genruntimeconfig.cache
+E:\Projetos\barber_project\api\barberApi\barberDLL\obj\Debug\net6.0\barberDLL.csproj.AssemblyReference.cache

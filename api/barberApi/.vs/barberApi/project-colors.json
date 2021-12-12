@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "50969c82-65a9-4254-8d26-89e99a312dfe": {
+      "ProjectGuid": "50969c82-65a9-4254-8d26-89e99a312dfe",
+      "DisplayName": "barberApi",
+      "ColorIndex": 0
+    },
+    "a3e8eba1-fc10-4951-b6ab-c04c4c91fe54": {
+      "ProjectGuid": "a3e8eba1-fc10-4951-b6ab-c04c4c91fe54",
+      "DisplayName": "barberDLL",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
