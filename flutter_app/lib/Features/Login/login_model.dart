@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-class LoginModel {
+class UserModel {
   String userName;
   String password;
   String email;
 
-  LoginModel(
+  UserModel(
     this.userName,
     this.password,
     this.email,
@@ -19,8 +19,8 @@ class LoginModel {
     };
   }
 
-  factory LoginModel.fromMap(Map<String, dynamic> map) {
-    return LoginModel(
+  factory UserModel.fromMap(Map<String, dynamic> map) {
+    return UserModel(
       map['userName'] ?? '',
       map['password'] ?? '',
       map['email'] ?? '',
@@ -29,6 +29,6 @@ class LoginModel {
 
   String toJson() => json.encode(toMap());
 
-  factory LoginModel.fromJson(String source) =>
-      LoginModel.fromMap(json.decode(source));
+  factory UserModel.fromJson(String source) =>
+      UserModel.fromMap(json.decode(source));
 }

@@ -28,5 +28,15 @@ namespace barberDLL.Users
             return users;
         }
 
+        public User? GetUser(User user)
+        {
+            User? users = null;
+            using (Context context = new Context())
+            {
+                users = (from item in context.Users where user.UserName == item.UserName && user.Password ==item.Password select item).FirstOrDefault();
+            }
+            return user;
+        }
+
     }
 }

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 abstract class IHtppService {
   Future<dynamic> get(String url);
 

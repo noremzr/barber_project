@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "barber_api", "barber_api\barber_api.csproj", "{DACA5D7A-B438-4A5E-B9A0-9915E6707947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "barber_api_DLL", "barber_api_DLL\barber_api_DLL.csproj", "{095CBF54-8F39-4267-8C11-8498F52CB82D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DACA5D7A-B438-4A5E-B9A0-9915E6707947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACA5D7A-B438-4A5E-B9A0-9915E6707947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACA5D7A-B438-4A5E-B9A0-9915E6707947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACA5D7A-B438-4A5E-B9A0-9915E6707947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095CBF54-8F39-4267-8C11-8498F52CB82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095CBF54-8F39-4267-8C11-8498F52CB82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095CBF54-8F39-4267-8C11-8498F52CB82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095CBF54-8F39-4267-8C11-8498F52CB82D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {089D9837-79F2-4864-BB31-A4D427B4C81A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "daca5d7a-b438-4a5e-b9a0-9915e6707947": {
+      "ProjectGuid": "daca5d7a-b438-4a5e-b9a0-9915e6707947",
+      "DisplayName": "barber_api",
+      "ColorIndex": 0
+    },
+    "095cbf54-8f39-4267-8c11-8498f52cb82d": {
+      "ProjectGuid": "095cbf54-8f39-4267-8c11-8498f52cb82d",
+      "DisplayName": "barber_api_DLL",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
