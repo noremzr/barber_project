@@ -12,6 +12,9 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.2.3",
+          "Swashbuckle.AspNetCore.Swagger": "6.2.3",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.2.3",
           "barberDLL": "1.0.0"
         },
         "runtime": {

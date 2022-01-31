@@ -1,15 +1,23 @@
 using Microsoft.AspNetCore.Builder;
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddControllersWithViews();
+//builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API WSVAP (WebSmartView)", Version = "v1" });
+    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); //This line
+});
+builder.Services.AddControllers();
 var app = builder.Build();
-app.UseSwagger();
-app.MapGet("/", () => "Hello World!");
-
 app.UseRouting();
-app.MapControllerRoute(
-    name: "user",
-    pattern: "{controller=User}/{action=Index}");
-app.UseSwaggerUI();
+app.MapControllers();
+app.UseDeveloperExceptionPage();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("swagger/v1/swagger.json", "v1");
+        options.RoutePrefix = string.Empty;
+    });
+}
 app.Run();

@@ -1,26 +1,29 @@
 import 'dart:convert';
+import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:universal_io/io.dart';
 import 'ihttp_service.dart';
 
-import 'package:http/http.dart' as http;
-
 class HttpService implements IHtppService {
-  final http.Client client;
-
-  HttpService(this.client);
+  HttpService();
 
   @override
-  Future get(String url) async =>
-      jsonDecode((await client.get(Uri(path: url))).body);
+  Future<Response> get(String url) async {
+    var response = await Dio()
+        .get(url, options: Options(contentType: ContentType.json.toString()));
+
+    return response;
+  }
 
   @override
-  Future post(String url, dynamic obj) async => jsonDecode(
-      (await client.post(Uri(path: url), body: jsonEncode(obj))).body);
+  Future post(String url, dynamic obj) async {
+    (await Dio().post(url, data: obj)).data;
+  }
 
   @override
-  Future put(String url, dynamic obj) async => jsonDecode(
-      (await client.put(Uri(path: url), body: jsonEncode(obj))).body);
+  Future put(String url, dynamic obj) async =>
+      (await Dio().put(url, data: obj)).data;
 
   @override
-  Future delete(String url) async =>
-      jsonDecode((await client.delete(Uri(path: url))).body);
+  Future delete(String url) async => (await Dio().delete(url)).data;
 }

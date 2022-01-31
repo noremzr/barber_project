@@ -1,7 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-using barberDLL.Users;
+using barberDLL.Models.Users;
 using Microsoft.AspNetCore.Mvc;
+using barberDLL.Models.Barbers;
 
 namespace barberApi.Controllers
 {
@@ -10,31 +11,36 @@ namespace barberApi.Controllers
     {
         [HttpGet]
         [Route("get-users")]
-        public void Get()
+        public List<UserModel> Get()
         {
             UserDAO userDAO = new UserDAO();
-            //return Ok(userDAO.Get());
+            return userDAO.Get();
         }
+
         [HttpPost]
         [Route("save-user")]
-        public void Save()
+        public string Save([FromBody] UserModel user)
         {
-            User user = new User("norem", "1234", "alessandroeich@hotmail.com");
             UserDAO userDAO = new UserDAO();
-            userDAO.Save(user);
-            //return Ok();
+            return userDAO.Save(user);
         }
+
         [HttpPost]
         [Route("validate-user")]
-        public void ValidateUser([FromBody]string teste)
+        public string ValidateUser([FromBody] UserModel user)
         {
-            //if (user == null) throw new ArgumentNullException(nameof(user));
-            //UserDAO userDAO = new UserDAO();
-            //userDAO.GetUser(user);
-            //if (userDAO.GetUser(user) != null)
-            //{
-            //    return Ok();
-            //}
+            if (user == null) throw new ArgumentNullException(nameof(user));
+            UserDAO userDAO = new UserDAO();
+            UserModel? userSalvo = userDAO.GetUserByUserNameOrEmail(user);
+            if (userSalvo == null)
+            {
+                return "Usuario Não Encontrado!";
+            }
+            else if (user.Password != userSalvo.Password)
+            {
+                return "Senhas Não Coincidem!";
+            }
+            return string.Empty;
         }
 
 
