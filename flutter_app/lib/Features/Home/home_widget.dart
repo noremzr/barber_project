@@ -25,39 +25,38 @@ class _HomeState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     verifyUserIsLogged();
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Flexible(
-              child: SizedBox(
-                child: Text(
-                  'Encontre o Seu Barbeiro Favorito',
-                  style: TextStyle(
-                      color: BaseColors.whiteColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold),
-                ),
-                width: 225,
-              ),
-            ),
-            CustomTextFormField(
-              controller: locationController,
-              placeholder: 'Localização',
-              height: 60,
-              width: window.physicalSize.width / 1.3,
-              sufixIconPath: SvgIcons.localization,
-              svgIconColor: BaseColors.backGroundColor,
-              backGroundColor: BaseColors.textFieldBackgroundColor,
-              borderRadius: 30.0,
-              passwordTextType: false,
-              marginTop: 12.0,
-              sufixFunction: () => getLocation(),
-            )
-          ],
-        ),
-      ),
+      body: Padding(padding: const EdgeInsets.all(12.0), child: RouterOutlet()
+          // Column(
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: [
+          //     Flexible(
+          //       child: SizedBox(
+          //         child: Text(
+          //           'Encontre o Seu Barbeiro Favorito',
+          //           style: TextStyle(
+          //               color: BaseColors.whiteColor,
+          //               fontSize: 24,
+          //               fontWeight: FontWeight.bold),
+          //         ),
+          //         width: 225,
+          //       ),
+          //     ),
+          //     CustomTextFormField(
+          //       controller: locationController,
+          //       placeholder: 'Localização',
+          //       height: 60,
+          //       width: window.physicalSize.width / 1.3,
+          //       sufixIconPath: SvgIcons.localization,
+          //       svgIconColor: BaseColors.backGroundColor,
+          //       backGroundColor: BaseColors.textFieldBackgroundColor,
+          //       borderRadius: 30.0,
+          //       passwordTextType: false,
+          //       marginTop: 12.0,
+          //       sufixFunction: () => getLocation(),
+          //     )
+          //   ],
+          // ),
+          ),
     );
   }
 

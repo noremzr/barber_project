@@ -19,9 +19,11 @@ namespace barberApi.Controllers
             List<UserModel> listBarbers = new UserDAO().GetBarbersByDistancePaging(barberFilter);
             UserModel lastBarber = listBarbers.Last();
 
-            double maxDistance = Math.Sqrt(Math.Pow(69.1 * (lastBarber.Latitude!.Value - barberFilter.Latitude!.Value), 2.0) +
-                       Math.Pow((69.1 * (barberFilter.Longitude!.Value - lastBarber.Longitude!.Value) *
-                       Math.Cos((lastBarber.Latitude!.Value / 57.3))), 2));
+            double maxDistance = Math.Sqrt(
+                             Math.Pow(barberFilter.Latitude!.Value + lastBarber.Latitude!.Value!, 2) +
+                             Math.Pow(barberFilter.Longitude!.Value - lastBarber.Longitude!.Value, 2)
+                             ) * 111.19;
+
 
             return new BarberResponse(listBarbers, maxDistance);
         }

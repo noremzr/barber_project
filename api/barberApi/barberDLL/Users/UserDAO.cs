@@ -113,25 +113,27 @@ namespace barberDLL.Models.Users
             {
                 users = (from item in context.Users!
                          .OrderBy(x =>
-                         Math.Sqrt(Math.Pow(69.1 * (x.Latitude!.Value - userFilter.Latitude!.Value), 2.0) +
-                         Math.Pow((69.1 * (userFilter.Longitude!.Value - x.Longitude!.Value) *
-                         Math.Cos((x.Latitude!.Value / 57.3))), 2))
+                         Math.Sqrt(
+                             Math.Pow(userFilter.Latitude!.Value + x.Latitude!.Value!, 2) +
+                             Math.Pow(userFilter.Longitude!.Value - x.Longitude!.Value, 2)
+                             ) * 111.19
                          )
-
                          where item.IsBarber == true
                          &&
-                         Math.Sqrt(Math.Pow((69.1 *
-                         (item.Latitude!.Value - userFilter.Latitude!.Value)), 2.0) +
-                         Math.Pow(69.1 *
-                         (userFilter.Longitude!.Value - item.Longitude!.Value) *
-                         Math.Cos((item.Latitude!.Value / 57.3)), 2)) > userFilter.UltimoCalculoFiltrado
-
-
+                         Math.Sqrt(
+                             Math.Pow(userFilter.Latitude!.Value + item.Latitude!.Value!, 2) +
+                             Math.Pow(userFilter.Longitude!.Value - item.Longitude!.Value, 2)
+                             ) * 111.19 > userFilter.UltimoCalculoFiltrado
                          select item).Take(10).ToList();
                 users.ForEach(x => x.Existe = true);
             }
             return users;
         }
+
+        //um calculo existente
+        //  Math.Sqrt(Math.Pow(69.1 * (x.Latitude!.Value - userFilter.Latitude!.Value), 2.0) +
+        //Math.Pow((69.1 * (userFilter.Longitude!.Value - x.Longitude!.Value) *
+        //               Math.Cos((x.Latitude!.Value / 57.3))), 2))
 
         public UserModel? GetUserByUserNameOrEmail(UserModel userFiltered)
         {
